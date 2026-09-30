@@ -1,0 +1,8 @@
+node_modules/
+dist/
+
+# Production database dumps (real member PII incl. minors — NEVER commit)
+*.sql
+*.sql.gz
+*.sql.zip
+db-dumps/

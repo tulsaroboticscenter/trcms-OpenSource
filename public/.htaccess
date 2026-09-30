@@ -1,0 +1,52 @@
+# Front-controller routing for Plesk (Apache behind nginx — the default).
+# Real files (the React build's assets, images, etc.) are served directly;
+# everything else is routed to index.php, which serves the API and the SPA.
+# Forward the Authorization (Bearer token) header to PHP. Apache behind
+# nginx/PHP-FPM (Plesk's default) strips it otherwise, which breaks JWT auth
+# (login works, but every authenticated request 401s and bounces to login).
+<IfModule mod_setenvif.c>
+    SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+</IfModule>
+# Apache 2.4.13+ with PHP-FPM/CGI: pass the auth header through directly.
+CGIPassAuth On
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Make the Authorization header available as HTTP_AUTHORIZATION after rewrite.
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # SECURITY: never execute or serve scripts from the uploads directory. Uploaded
+    # files are user content (handbook PDFs, email attachments, etc.); even though
+    # upload endpoints validate type, this is defense in depth so a planted script
+    # can never be run. Must come before the "serve existing files" passthrough.
+    RewriteRule ^uploads/.+\.(?:php|phar|phtml|pht|php[0-9]|cgi|pl|py|sh|asp|aspx|htaccess)$ - [F,NC]
+
+    # Scout PWA: /scout and /scout/ must serve the PWA's own index.html, not the
+    # React SPA. This must come before the file/directory passthrough so the
+    # directory match doesn't fall through to index.php when DirectoryIndex
+    # isn't configured at the vhost level.
+    RewriteRule ^scout/?$ /scout/index.html [L]
+
+    # Serve existing files/directories as-is (static React assets, uploads, etc.)
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Everything else → the Slim front controller
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
+
+# Increase PHP upload limits for robot photo uploads (mobile photos can be 4–8 MB).
+# mod_php only — PHP-FPM reads .user.ini instead (also present in this directory).
+<IfModule mod_php.c>
+    php_value upload_max_filesize 10M
+    php_value post_max_size 12M
+</IfModule>
+
+# Never serve dotfiles (defense in depth; .env lives outside docroot anyway)
+# Exception: .user.ini must be readable by PHP-FPM but not by browsers.
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>

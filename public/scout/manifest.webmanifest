@@ -1,0 +1,15 @@
+{
+  "name": "TRC Scout",
+  "short_name": "TRC Scout",
+  "description": "Tulsa Robotics Center FTC scouting — works offline.",
+  "start_url": "/scout/index.html",
+  "scope": "/scout/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    { "src": "/trc_2.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/trc_2.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

@@ -1,0 +1,36 @@
+-- Hall of Fame: a curated, editable profile for each graduating member.
+-- Created as a SNAPSHOT from the member record (then freely edited), so it
+-- survives the member being archived or deleted. Repeatable lists (teams,
+-- awards, positions, links, documents) are stored as JSON.
+CREATE TABLE hof_members (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  member_id INT NULL,
+  first_name VARCHAR(100) NOT NULL,
+  last_name VARCHAR(100) NOT NULL,
+  photo_url VARCHAR(500) NULL,
+  graduation_year INT NULL,
+  years_in_program VARCHAR(100) NULL,
+  high_school VARCHAR(200) NULL,
+  deans_list_semifinalist TINYINT(1) NOT NULL DEFAULT 0,
+  deans_list_finalist TINYINT(1) NOT NULL DEFAULT 0,
+  eagle_scout TINYINT(1) NOT NULL DEFAULT 0,
+  eagle_scout_troop VARCHAR(100) NULL,
+  college VARCHAR(250) NULL,
+  field_of_study VARCHAR(250) NULL,
+  degrees VARCHAR(400) NULL,
+  where_now TEXT NULL,
+  teams JSON NULL,
+  awards JSON NULL,
+  positions JSON NULL,
+  project_links JSON NULL,
+  article_links JSON NULL,
+  album_links JSON NULL,
+  documents JSON NULL,
+  is_published TINYINT(1) NOT NULL DEFAULT 0,
+  display_order INT NOT NULL DEFAULT 0,
+  created_by_id INT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_hof_member FOREIGN KEY (member_id) REFERENCES members(id) ON DELETE SET NULL,
+  INDEX idx_hof_class (graduation_year, is_published)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

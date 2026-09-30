@@ -1,0 +1,158 @@
+:root {
+  --bg: #0f172a; --panel: #1e293b; --panel2: #334155; --line: #475569;
+  --text: #e2e8f0; --muted: #94a3b8; --accent: #38bdf8; --accent2: #0ea5e9;
+  --good: #22c55e; --warn: #f59e0b; --bad: #ef4444; --red: #ef4444; --blue: #3b82f6;
+  /* iPhone safe-area insets — fall back to 0 on non-notch devices */
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sat: env(safe-area-inset-top, 0px);
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--bg); color: var(--text); font-size: 16px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  overscroll-behavior-y: contain;
+}
+/* extra bottom padding keeps content above the fixed nav + iPhone home bar */
+.app { max-width: 720px; margin: 0 auto; padding-bottom: calc(68px + var(--sab)); }
+
+header {
+  position: sticky; top: 0; z-index: 10; background: var(--bg);
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px max(14px, env(safe-area-inset-left, 0px));
+  border-bottom: 1px solid var(--line);
+}
+header h1 { font-size: 16px; margin: 0; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.status { font-size: 12px; padding: 3px 8px; border-radius: 999px; background: var(--panel2); color: var(--muted); white-space: nowrap; }
+.status.online { color: var(--good); } .status.offline { color: var(--warn); }
+.sync-badge { font-size: 12px; padding: 3px 8px; border-radius: 999px; background: var(--accent2); color: #06283d; font-weight: 700; white-space: nowrap; }
+
+main { padding: 14px; }
+h2 { font-size: 18px; margin: 4px 0 12px; }
+.muted { color: var(--muted); }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px; margin-bottom: 12px; }
+.row { display: flex; gap: 10px; align-items: center; }
+.spread { justify-content: space-between; }
+label { display: block; font-size: 13px; color: var(--muted); margin: 12px 0 4px; }
+input[type=checkbox] { width: 22px; height: 22px; accent-color: var(--accent2); flex: none; }
+input:not([type=checkbox]), select, textarea {
+  width: 100%; background: var(--panel2); color: var(--text); border: 1px solid var(--line);
+  border-radius: 10px; padding: 12px; font-size: 16px; /* 16px prevents iOS auto-zoom on focus */
+  scroll-margin-top: 80px; scroll-margin-bottom: 120px; /* stop iOS from overshooting when scrolling focused input into view */
+}
+textarea { min-height: 70px; resize: vertical; }
+button {
+  background: var(--accent2); color: #06283d; border: none; border-radius: 10px;
+  padding: 14px 16px; font-size: 16px; font-weight: 700; cursor: pointer; width: 100%;
+  /* ensure 44px minimum touch target on all buttons */
+  min-height: 44px;
+}
+button.secondary { background: var(--panel2); color: var(--text); }
+button.ghost { background: transparent; color: var(--accent); border: 1px solid var(--line); }
+button:disabled { opacity: .5; }
+
+.list-item { display: flex; justify-content: space-between; align-items: center; padding: 14px; border: 1px solid var(--line); border-radius: 10px; margin-bottom: 8px; background: var(--panel); min-height: 56px; }
+.list-item:active { background: var(--panel2); }
+.pill { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--panel2); color: var(--muted); }
+.pill.red { background: rgba(239,68,68,.2); color: #fca5a5; }
+.pill.blue { background: rgba(59,130,246,.2); color: #93c5fd; }
+
+/* 4-box tap scoring grid */
+.grid4 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.tap {
+  position: relative; border-radius: 14px; padding: 18px 10px; text-align: center;
+  border: 2px solid var(--line); background: var(--panel); user-select: none;
+  /* large touch target — easier to tap quickly during a match */
+  min-height: 90px;
+}
+.tap.make { border-color: var(--good); }
+.tap.miss { border-color: var(--bad); }
+.tap .count { font-size: 40px; font-weight: 800; line-height: 1; }
+.tap .lbl { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.tap .minus { position: absolute; top: 6px; right: 6px; width: 34px; height: 34px; border-radius: 8px; background: var(--panel2); color: var(--text); font-size: 20px; display: flex; align-items: center; justify-content: center; }
+.center-btn { margin: 10px 0; }
+.counter { display: flex; align-items: center; gap: 10px; }
+.counter button { width: 48px; height: 48px; padding: 0; font-size: 22px; }
+.counter .val { flex: 1; text-align: center; font-size: 22px; font-weight: 700; }
+
+.seg { display: flex; flex-wrap: wrap; gap: 8px; }
+.seg .opt { flex: 1 1 auto; min-width: 30%; text-align: center; padding: 12px 8px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); min-height: 44px; display: flex; align-items: center; justify-content: center; }
+.seg .opt.on { background: var(--accent2); color: #06283d; border-color: var(--accent2); font-weight: 700; }
+
+/* first phase-title in a card sits at the top — don't double-stack with card padding */
+.phase-title { font-size: 13px; letter-spacing: .05em; text-transform: uppercase; color: var(--accent); margin: 14px 0 8px; }
+.card > .phase-title:first-child { margin-top: 0; }
+
+/* toast sits above the nav bar + home indicator */
+.toast { position: fixed; left: 50%; bottom: calc(72px + var(--sab)); transform: translateX(-50%); background: var(--panel2); border: 1px solid var(--line); padding: 12px 18px; border-radius: 10px; z-index: 50; max-width: min(90%, 360px); text-align: center; }
+
+/* bottom nav — 6 buttons fit on a 375px iPhone without cramping */
+nav.bottom {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--panel); border-top: 1px solid var(--line);
+  display: flex;
+  padding-bottom: var(--sab);  /* push buttons above iPhone home bar */
+}
+nav.bottom button {
+  background: none; color: var(--muted); border-radius: 0;
+  /* tight horizontal padding so 6 buttons fit on 375px; vertical stays generous */
+  padding: 10px 2px; font-size: 11px; font-weight: 600; flex: 1;
+  min-height: 44px;
+  letter-spacing: -.01em;
+}
+nav.bottom button.on { color: var(--accent); }
+
+/* watchlist (Teams-page star + drag-and-drop columns) */
+.wl-star { width: auto; background: transparent; border: none; color: var(--muted); font-size: 22px; padding: 0 4px; line-height: 1; min-height: 44px; }
+.wl-star.on { color: #fbbf24; }
+.wl-zone { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 10px; margin-bottom: 12px; }
+.wl-zone-h { font-size: 13px; font-weight: 700; color: var(--accent); margin-bottom: 8px; }
+.wl-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.wl-cols .wl-zone { margin-bottom: 0; }
+.wl-list { min-height: 56px; display: flex; flex-direction: column; gap: 6px; }
+.wl-card { display: flex; align-items: center; gap: 6px; padding: 10px 8px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel2); cursor: pointer; min-height: 48px; }
+.wl-card.wl-selected { border-color: var(--accent); background: var(--panel); }
+#wlReport { margin-top: 18px; }
+.wl-meta { flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 14px; }
+.wl-grip { cursor: grab; touch-action: none; font-size: 18px; color: var(--muted); padding: 6px 2px; user-select: none; flex: none; }
+.wl-x { width: auto; flex: none; background: transparent; color: var(--muted); border: none; padding: 6px; font-size: 13px; min-height: 44px; min-width: 32px; }
+.wl-ghost { opacity: .35; }
+.wl-drag { position: fixed; z-index: 100; pointer-events: none; box-shadow: 0 10px 28px rgba(0,0,0,.55); opacity: .96; }
+/* during an active drag: no text-selection and no touch-scroll anywhere */
+body.wl-dragging { user-select: none; -webkit-user-select: none; }
+body.wl-dragging .wl-zone, body.wl-dragging .wl-card, body.wl-dragging .wl-list { touch-action: none; }
+/* stack the Far/Goal columns vertically on very narrow screens */
+@media (max-width: 360px) {
+  .wl-cols { grid-template-columns: 1fr; }
+}
+
+/* match history table — horizontal scroll with fade hint on right edge */
+.mh-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; position: relative; }
+.mh-scroll::after { content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 24px; background: linear-gradient(to right, transparent, var(--panel)); pointer-events: none; border-radius: 0 8px 8px 0; }
+.mh-tbl td, .mh-tbl th { white-space: nowrap; }
+.mh-tbl td:last-child, .mh-tbl th:last-child { white-space: normal; min-width: 120px; }
+
+/* robot photo gallery (pit form + report) */
+.rp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 8px; margin-top: 8px; }
+.rp-grid-sm { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); margin-top: 10px; }
+.rp-thumb { position: relative; aspect-ratio: 1; border-radius: 8px; overflow: hidden; border: 2px solid var(--line); cursor: pointer; }
+.rp-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.rp-thumb.rp-profile { border-color: var(--accent); }
+.rp-thumb .rp-star { position: absolute; top: 3px; right: 3px; background: var(--accent); color: #fff; border-radius: 4px; font-size: 10px; padding: 1px 4px; pointer-events: none; }
+.rp-thumb .rp-del { position: absolute; top: 3px; left: 3px; background: rgba(0,0,0,.6); color: #fff; border: none; border-radius: 4px; font-size: 11px; padding: 1px 5px; cursor: pointer; line-height: 1.4; }
+.rp-add { display: flex; align-items: center; justify-content: center; aspect-ratio: 1; border-radius: 8px; border: 2px dashed var(--line); color: var(--muted); font-size: 28px; cursor: pointer; position: relative; user-select: none; }
+.rp-add input[type=file] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
+.rp-profile-banner { width: 100%; max-height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 12px; display: block; }
+
+/* Photo lightbox */
+.lb-overlay { position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,.92); display: none; visibility: hidden; align-items: center; justify-content: center; padding: 16px; cursor: pointer; }
+.lb-overlay.lb-open { display: flex; visibility: visible; }
+.lb-overlay img { max-width: 100%; max-height: 90vh; object-fit: contain; border-radius: 8px; box-shadow: 0 8px 40px rgba(0,0,0,.8); cursor: default; }
+
+/* sortable data table (pre-event details) */
+table.dt { border-collapse: collapse; width: 100%; font-size: 13px; }
+table.dt th, table.dt td { padding: 7px 9px; border-bottom: 1px solid var(--line); white-space: nowrap; text-align: left; }
+table.dt th { position: sticky; top: 0; background: var(--panel2); cursor: pointer; user-select: none; color: var(--muted); }
+table.dt th.s { color: var(--accent); }
+table.dt td.r, table.dt th.r { text-align: right; }
+table.dt tbody tr:active { background: var(--panel); }

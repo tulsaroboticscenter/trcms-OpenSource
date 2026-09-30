@@ -1,0 +1,28 @@
+name: CI
+
+# Runs on every pull request into master. A PR can't be merged until this passes
+# (once it's marked as a required status check in branch protection).
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  php-lint:
+    name: PHP syntax check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+
+      - name: Lint all PHP files
+        run: |
+          set -e
+          # php -l every PHP file under src/ and public/; fail on first error.
+          find src public -name '*.php' -print0 | xargs -0 -n1 php -l
+
+      - name: Validate composer.json
+        run: composer validate --no-check-publish

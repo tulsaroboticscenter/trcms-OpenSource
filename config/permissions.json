@@ -1,0 +1,985 @@
+{
+  "PERMISSION_CATALOG": {
+    "members": {
+      "label": "Members",
+      "items": [
+        {
+          "key": "members.directory",
+          "label": "Member Directory (view list)"
+        },
+        {
+          "key": "members.edit_own",
+          "label": "Edit Own Profile & Settings"
+        },
+        {
+          "key": "members.edit_others",
+          "label": "Edit Other Members' Profiles"
+        },
+        {
+          "key": "members.demographics",
+          "label": "Demographics & Sensitive Info"
+        },
+        {
+          "key": "members.view_address",
+          "label": "View Member Home Addresses"
+        },
+        {
+          "key": "members.view_contact",
+          "label": "View Member Email & Phone"
+        },
+        {
+          "key": "members.view_medical",
+          "label": "View Medical & Emergency Info"
+        },
+        {
+          "key": "members.view_employer",
+          "label": "View Employer & Matching-Gift Info"
+        },
+        {
+          "key": "members.view_reflections",
+          "label": "View Members' Private Reflections"
+        },
+        {
+          "key": "members.own_reflections",
+          "label": "Use the \"My Reflections\" pane (own)"
+        },
+        {
+          "key": "members.archive",
+          "label": "Archive / Restore Members"
+        },
+        {
+          "key": "members.system_permissions",
+          "label": "System Permissions (assign roles)"
+        },
+        {
+          "key": "members.merge",
+          "label": "Merge Duplicate Members"
+        },
+        {
+          "key": "members.create",
+          "label": "Add / Import Members"
+        },
+        {
+          "key": "scholarships.applications",
+          "label": "Scholarship Applications — view & review (confidential family aid)"
+        },
+        {
+          "key": "scholarships.applications.delete",
+          "label": "Scholarship Applications — delete (e.g. remove a duplicate)"
+        }
+      ]
+    },
+    "scouting": {
+      "label": "Scouting",
+      "items": [
+        {
+          "key": "scouting.scout",
+          "label": "Scout (pit / match / observations + view)"
+        },
+        {
+          "key": "scouting.manage",
+          "label": "Manage Scouting (events, sync, consolidate, analysis)"
+        }
+      ]
+    },
+    "summer_camp": {
+      "label": "Summer Camp",
+      "items": [
+        {
+          "key": "camp.view",
+          "label": "View Camps & Registrations"
+        },
+        {
+          "key": "camp.manage",
+          "label": "Manage Camps, Registrations & Staff"
+        }
+      ]
+    },
+    "administration": {
+      "label": "Administration",
+      "items": [
+        {
+          "key": "admin.roles",
+          "label": "Manage Roles & Permissions"
+        },
+        {
+          "key": "admin.impersonate",
+          "label": "Impersonate a Member"
+        },
+        {
+          "key": "admin.password_reset",
+          "label": "Reset Member Passwords"
+        },
+        {
+          "key": "admin.security",
+          "label": "Security Settings & Login Logs"
+        },
+        {
+          "key": "admin.system_stats",
+          "label": "Admin System Stats"
+        },
+        {
+          "key": "admin.config",
+          "label": "Edit Configurable Options"
+        },
+        {
+          "key": "admin.programs",
+          "label": "Manage Programs"
+        },
+        {
+          "key": "admin.layouts",
+          "label": "Configure Profile & Team-Pane Layouts"
+        }
+      ]
+    },
+    "profile_sections": {
+      "label": "Member Profile Sections (show / hide)",
+      "items": [
+        {
+          "key": "profile.contact",
+          "label": "Contact Information"
+        },
+        {
+          "key": "profile.personal",
+          "label": "Personal Information"
+        },
+        {
+          "key": "profile.emergency",
+          "label": "Emergency Contact"
+        },
+        {
+          "key": "profile.guardian",
+          "label": "Parent / Guardian"
+        },
+        {
+          "key": "profile.notes",
+          "label": "Notes"
+        },
+        {
+          "key": "profile.enrollments",
+          "label": "Enrollments"
+        },
+        {
+          "key": "profile.teams",
+          "label": "Teams"
+        },
+        {
+          "key": "profile.ylc",
+          "label": "Youth Leadership (YLC)"
+        },
+        {
+          "key": "profile.compliance",
+          "label": "FIRST Compliance"
+        },
+        {
+          "key": "profile.mentor_tc",
+          "label": "Annual T&C Agreement"
+        },
+        {
+          "key": "profile.seasons",
+          "label": "FIRST Game Participation"
+        },
+        {
+          "key": "profile.family",
+          "label": "Family"
+        },
+        {
+          "key": "profile.communications",
+          "label": "Message History"
+        },
+        {
+          "key": "profile.comm_prefs",
+          "label": "Communication Preferences"
+        }
+      ]
+    },
+    "families": {
+      "label": "Families",
+      "items": [
+        {
+          "key": "families.view",
+          "label": "Family Directory (view)"
+        },
+        {
+          "key": "families.manage",
+          "label": "Family Associations"
+        }
+      ]
+    },
+    "shopping": {
+      "label": "Shopping List",
+      "items": [
+        {
+          "key": "shopping.view",
+          "label": "View Shopping List"
+        },
+        {
+          "key": "shopping.add",
+          "label": "Add / Claim Items"
+        },
+        {
+          "key": "shopping.purchase",
+          "label": "Record Purchases & Reimbursement"
+        },
+        {
+          "key": "shopping.manage",
+          "label": "Manage Stores / Categories / Staples"
+        }
+      ]
+    },
+    "certifications": {
+      "label": "Certifications",
+      "items": [
+        {
+          "key": "certifications.view",
+          "label": "View Certifications"
+        },
+        {
+          "key": "certifications.award",
+          "label": "Mark Completions"
+        },
+        {
+          "key": "certifications.manage",
+          "label": "Manage Certification Catalog"
+        },
+        {
+          "key": "cert_lms.manage",
+          "label": "Build Certification Quizzes (Learning — hidden until enabled)"
+        },
+        {
+          "key": "cert_lms.take",
+          "label": "Take Certification Quizzes (Learning — hidden until enabled)"
+        }
+      ]
+    },
+    "planning": {
+      "label": "Season Planning",
+      "items": [
+        {
+          "key": "planning.view",
+          "label": "View Season Plan & Tasks"
+        },
+        {
+          "key": "planning.manage",
+          "label": "Manage Season Plan (Categories / Activities)"
+        },
+        {
+          "key": "planning.tasks",
+          "label": "Add / Claim / Complete Team Tasks"
+        },
+        {
+          "key": "spotlight.manage",
+          "label": "Run Meeting Spotlight (Who's It?)"
+        },
+        {
+          "key": "planning.tasks_others",
+          "label": "Other Teams â€” View Tasks"
+        }
+      ]
+    },
+    "strategy": {
+      "label": "Season Strategy",
+      "items": [
+        {
+          "key": "goals.view",
+          "label": "View Season Goals"
+        },
+        {
+          "key": "goals.manage",
+          "label": "Create / Manage Season Goals"
+        },
+        {
+          "key": "goals.view_others",
+          "label": "View / manage goals for ALL teams (not just own)"
+        },
+        {
+          "key": "portfolio.view",
+          "label": "View Portfolio Tracker"
+        },
+        {
+          "key": "portfolio.contribute",
+          "label": "Contribute Portfolio Pieces & Captures"
+        },
+        {
+          "key": "portfolio.manage",
+          "label": "Manage Portfolio (pieces, templates, status)"
+        },
+        {
+          "key": "strategy.readiness.view",
+          "label": "View Inspire/Impact Readiness"
+        }
+      ]
+    },
+    "activity": {
+      "label": "Activity / Time Logging",
+      "items": [
+        {
+          "key": "activity.my_time",
+          "label": "See the \"My Time\" menu / page"
+        },
+        {
+          "key": "activity.log",
+          "label": "Log My Time"
+        },
+        {
+          "key": "activity.view",
+          "label": "View Time & Impact Reports"
+        },
+        {
+          "key": "activity.manage",
+          "label": "Manage / Verify Others' Time"
+        }
+      ]
+    },
+    "resume": {
+      "label": "Resume",
+      "items": [
+        {
+          "key": "resume.view",
+          "label": "See the \"My Resume\" menu / page"
+        },
+        {
+          "key": "resume.view_others",
+          "label": "View other members' resumes",
+          "description": "See any youth's resume (beyond a viewer's own / their guardian's, and beyond the contextual interview/team access that always applies)."
+        },
+        {
+          "key": "resume.mark_complete",
+          "label": "Mark a resume complete for someone",
+          "description": "Mark another member's resume as completed (as if built outside the system), and reopen it."
+        }
+      ]
+    },
+    "volunteering": {
+      "label": "Volunteering",
+      "items": [
+        {
+          "key": "volunteering.view",
+          "label": "See the \"My Volunteering\" page (opportunities + hours report)"
+        }
+      ]
+    },
+    "resources": {
+      "label": "Resource Tracking",
+      "items": [
+        {
+          "key": "resources.view",
+          "label": "View Team Resources"
+        },
+        {
+          "key": "resources.trc",
+          "label": "View TRC Resources"
+        },
+        {
+          "key": "resources.manage",
+          "label": "Add & Manage Resources"
+        },
+        {
+          "key": "resources.grant",
+          "label": "Grant & Revoke Access"
+        }
+      ]
+    },
+    "visitors": {
+      "label": "Visitors",
+      "items": [
+        {
+          "key": "visitors.records",
+          "label": "Visitor Records"
+        },
+        {
+          "key": "visitors.checkin",
+          "label": "Visitor Check-In"
+        }
+      ]
+    },
+    "checkin": {
+      "label": "Check-In",
+      "items": [
+        {
+          "key": "checkin.member",
+          "label": "Member Check-In"
+        },
+        {
+          "key": "checkin.event",
+          "label": "Event Check-In"
+        },
+        {
+          "key": "checkin.manage",
+          "label": "Remove / Delete Check-Ins"
+        }
+      ]
+    },
+    "enrollment": {
+      "label": "Enrollment",
+      "items": [
+        {
+          "key": "enrollment.records",
+          "label": "Enrollments"
+        },
+        {
+          "key": "fdp.manage",
+          "label": "Manage FIRST Development Program",
+          "description": "Assign youth to the FDP and graduate them from it."
+        },
+        {
+          "key": "enrollment.payments",
+          "label": "Payments"
+        },
+        {
+          "key": "enrollment.tc",
+          "label": "Terms & Conditions"
+        },
+        {
+          "key": "enrollment.delete",
+          "label": "Delete Enrollments",
+          "description": "Permanently delete an enrollment record (for cleaning up an erroneously-entered one)."
+        }
+      ]
+    },
+    "teams": {
+      "label": "Teams",
+      "items": [
+        {
+          "key": "teams.profiles_own",
+          "label": "Own Team — Profile"
+        },
+        {
+          "key": "teams.profiles_others",
+          "label": "Other Teams — Profiles"
+        },
+        {
+          "key": "teams.roster_own",
+          "label": "Own Team — Roster"
+        },
+        {
+          "key": "teams.roster_others",
+          "label": "Other Teams — Rosters"
+        },
+        {
+          "key": "teams.roster_manage",
+          "label": "Manage Team Roster (add / remove members)"
+        },
+        {
+          "key": "teams.theme",
+          "label": "Customize Team Page Theme"
+        },
+        {
+          "key": "teams.photo",
+          "label": "Change Team Page Photo"
+        },
+        {
+          "key": "teams.season_history",
+          "label": "View a Team's Past Seasons"
+        }
+      ]
+    },
+    "events": {
+      "label": "Events & Calendar",
+      "items": [
+        {
+          "key": "events.calendar",
+          "label": "Events & Calendar"
+        },
+        {
+          "key": "events.logistics",
+          "label": "Event Logistics"
+        },
+        {
+          "key": "events.attendance",
+          "label": "Attendance"
+        },
+        {
+          "key": "events.fundraising",
+          "label": "Manage Event Fundraising"
+        },
+        {
+          "key": "events.view_volunteers",
+          "label": "See outside volunteers on an event's attendee list"
+        }
+      ]
+    },
+    "seasons": {
+      "label": "Seasons",
+      "items": [
+        {
+          "key": "seasons.manage",
+          "label": "FIRST Seasons"
+        }
+      ]
+    },
+    "communications": {
+      "label": "Communications",
+      "items": [
+        {
+          "key": "communications.send",
+          "label": "Compose & Send"
+        },
+        {
+          "key": "communications.templates",
+          "label": "Email Templates"
+        },
+        {
+          "key": "communications.history",
+          "label": "Message History"
+        }
+      ]
+    },
+    "reports": {
+      "label": "Reports",
+      "items": [
+        {
+          "key": "reports.view",
+          "label": "View Reports"
+        },
+        {
+          "key": "reports.export",
+          "label": "Export / CSV"
+        }
+      ]
+    },
+    "grants": {
+      "label": "Grant Tracking",
+      "items": [
+        {
+          "key": "grants.view",
+          "label": "View Grants"
+        },
+        {
+          "key": "grants.manage",
+          "label": "Manage Grants"
+        }
+      ]
+    },
+    "scholarships": {
+      "label": "College Scholarships",
+      "items": [
+        {
+          "key": "scholarships.manage",
+          "label": "Manage Scholarships (catalog, tag youth, reports, rollover)"
+        }
+      ]
+    },
+    "raffles": {
+      "label": "Raffles",
+      "items": [
+        {
+          "key": "raffles.manage",
+          "label": "Manage Raffles (create, booth sales, draw winners)"
+        }
+      ]
+    },
+    "incidents": {
+      "label": "Incident Reports",
+      "items": [
+        { "key": "incidents.report", "label": "File an Incident Report" },
+        { "key": "incidents.view_own", "label": "View My Own Reports" },
+        { "key": "incidents.queue", "label": "Incident Queue (all reports)" },
+        { "key": "incidents.triage", "label": "Triage & Assign Incidents" },
+        { "key": "incidents.close", "label": "Close Incidents" },
+        { "key": "incidents.settings", "label": "Incident Routing Settings" },
+        { "key": "incidents.first_aid_log", "label": "First Aid Log" },
+        { "key": "incidents.view_restricted", "label": "View Restricted Incidents" }
+      ]
+    },
+    "sponsors": {
+      "label": "Sponsors",
+      "items": [
+        {
+          "key": "sponsors.view",
+          "label": "View Sponsors"
+        },
+        {
+          "key": "sponsors.contact",
+          "label": "Contact Sponsors (subject to team ownership)"
+        },
+        {
+          "key": "sponsors.manage",
+          "label": "Manage Sponsors"
+        }
+      ]
+    },
+    "groups": {
+      "label": "Member Groups (YLC, committees)",
+      "items": [
+        {
+          "key": "groups.manage",
+          "label": "Manage Groups & their members"
+        }
+      ]
+    },
+    "reservations": {
+      "label": "Room & Resource Reservations",
+      "items": [
+        {
+          "key": "reservations.view",
+          "label": "View & Request Reservations"
+        },
+        {
+          "key": "reservations.approve",
+          "label": "Approve / Deny Reservations"
+        },
+        {
+          "key": "reservations.manage",
+          "label": "Manage Rooms & Resources"
+        }
+      ]
+    },
+    "hof": {
+      "label": "Hall of Fame",
+      "items": [
+        {
+          "key": "hof.view",
+          "label": "View Hall of Fame"
+        },
+        {
+          "key": "hof.manage",
+          "label": "Manage Hall of Fame (create, edit, publish/hide)"
+        }
+      ]
+    },
+    "feedback": {
+      "label": "Feedback (Bugs & Feature Requests)",
+      "items": [
+        {
+          "key": "feedback.submit",
+          "label": "Submit Feedback"
+        },
+        {
+          "key": "feedback.manage",
+          "label": "Triage & Manage All Feedback"
+        }
+      ]
+    },
+    "announcements": {
+      "label": "Announcements",
+      "items": [
+        {
+          "key": "announcements.view",
+          "label": "View Announcements"
+        },
+        {
+          "key": "announcements.manage",
+          "label": "Post & Manage Announcements"
+        }
+      ]
+    },
+    "finance": {
+      "label": "Team Financials (QuickBooks)",
+      "items": [
+        {
+          "key": "finance.view",
+          "label": "View Imported Team Financials"
+        },
+        {
+          "key": "finance.manage",
+          "label": "Import & Map QuickBooks Financials"
+        }
+      ]
+    },
+    "repairs": {
+      "label": "Repair & Maintenance Tickets",
+      "items": [
+        {
+          "key": "repairs.view",
+          "label": "View Repair Tickets"
+        },
+        {
+          "key": "repairs.submit",
+          "label": "Report a Repair / Maintenance Issue"
+        },
+        {
+          "key": "repairs.manage",
+          "label": "Assign, Update Status & Close Tickets"
+        }
+      ]
+    },
+    "roles": {
+      "label": "Youth & Adult Roles",
+      "items": [
+        {
+          "key": "roles.ylc",
+          "label": "Youth Leadership Council"
+        },
+        {
+          "key": "roles.compliance",
+          "label": "Mentor Compliance"
+        }
+      ]
+    },
+    "inventory": {
+      "label": "Inventory Management",
+      "items": [
+        {
+          "key": "inventory.my_equipment",
+          "label": "See the \"My Equipment\" menu / page"
+        },
+        {
+          "key": "inventory.view",
+          "label": "View Inventory & Assets"
+        },
+        {
+          "key": "inventory.items",
+          "label": "Create / Edit Items & Assets"
+        },
+        {
+          "key": "inventory.move",
+          "label": "Move / Adjust Inventory"
+        },
+        {
+          "key": "inventory.locations",
+          "label": "Manage Locations"
+        },
+        {
+          "key": "inventory.vendors",
+          "label": "Manage Vendors"
+        },
+        {
+          "key": "inventory.import",
+          "label": "Bulk Import"
+        },
+        {
+          "key": "inventory.bom",
+          "label": "Create / Edit BOMs"
+        },
+        {
+          "key": "inventory.bom_approve",
+          "label": "Approve / Order BOMs"
+        },
+        {
+          "key": "inventory.budgets",
+          "label": "Manage Team Budgets"
+        },
+        {
+          "key": "inventory.carryover",
+          "label": "Set Team Prior-Year Carryover"
+        },
+        {
+          "key": "inventory.po",
+          "label": "Create / Manage Purchase Orders"
+        },
+        {
+          "key": "inventory.receive",
+          "label": "Receive Items"
+        },
+        {
+          "key": "inventory.checkout",
+          "label": "Check Out / Request Equipment"
+        },
+        {
+          "key": "inventory.checkout_approve",
+          "label": "Approve / Return Checkouts"
+        },
+        {
+          "key": "inventory.battery",
+          "label": "Log Battery Tests"
+        }
+      ]
+    },
+    "admin": {
+      "label": "Administration",
+      "items": [
+        {
+          "key": "admin.console",
+          "label": "Admin Console"
+        },
+        {
+          "key": "admin.roles",
+          "label": "Role Management"
+        },
+        {
+          "key": "admin.audit",
+          "label": "Audit Log"
+        },
+        {
+          "key": "admin.config",
+          "label": "System Configuration"
+        }
+      ]
+    },
+    "onboarding": {
+      "label": "Onboarding",
+      "items": [
+        {
+          "key": "onboarding.view",
+          "label": "View Members' Onboarding Checklists"
+        },
+        {
+          "key": "onboarding.manage",
+          "label": "Assign & Complete Onboarding Items"
+        }
+      ]
+    }
+  },
+  "RESOURCE_DEFAULTS": {
+    "members.edit_others": "none",
+    "members.system_permissions": "none",
+    "members.merge": "none",
+    "members.create": "none",
+    "members.archive": "none",
+    "members.demographics": "none",
+    "fdp.manage": "none",
+    "enrollment.delete": "none",
+    "members.view_address": "none",
+    "members.view_medical": "none",
+    "members.view_employer": "none",
+    "members.view_contact": "none",
+    "members.view_reflections": "none",
+    "members.own_reflections": "none",
+    "admin.roles": "none",
+    "admin.impersonate": "none",
+    "admin.password_reset": "none",
+    "admin.security": "none",
+    "admin.system_stats": "none",
+    "admin.config": "none",
+    "admin.programs": "none",
+    "admin.layouts": "none",
+    "camp.view": "none",
+    "camp.manage": "none",
+    "families.view": "read",
+    "teams.profiles_own": "read",
+    "teams.profiles_others": "read",
+    "teams.roster_own": "read",
+    "teams.roster_others": "read",
+    "teams.roster_manage": "none",
+    "teams.theme": "none",
+    "teams.photo": "none",
+    "shopping.view": "read",
+    "shopping.add": "write",
+    "shopping.purchase": "none",
+    "shopping.manage": "none",
+    "certifications.view": "read",
+    "certifications.award": "none",
+    "certifications.manage": "none",
+    "cert_lms.manage": "none",
+    "cert_lms.take": "none",
+    "planning.view": "read",
+    "planning.tasks": "write",
+    "planning.tasks_others": "read",
+    "planning.manage": "none",
+    "spotlight.manage": "none",
+    "goals.view": "none",
+    "goals.manage": "none",
+    "goals.view_others": "none",
+    "portfolio.view": "read",
+    "portfolio.contribute": "none",
+    "portfolio.manage": "none",
+    "strategy.readiness.view": "read",
+    "activity.my_time": "none",
+    "activity.log": "write",
+    "activity.view": "read",
+    "activity.manage": "none",
+    "resume.view": "none",
+    "resume.view_others": "none",
+    "resume.mark_complete": "none",
+    "volunteering.view": "none",
+    "resources.view": "read",
+    "resources.trc": "read",
+    "resources.manage": "none",
+    "resources.grant": "none",
+    "checkin.manage": "none",
+    "events.fundraising": "none",
+    "events.view_volunteers": "none",
+    "grants.view": "none",
+    "grants.manage": "none",
+    "scholarships.manage": "none",
+    "raffles.manage": "none",
+    "reports.view": "none",
+    "reports.export": "none",
+    "sponsors.view": "read",
+    "scholarships.applications": "none",
+    "scholarships.applications.delete": "none",
+    "sponsors.contact": "write",
+    "sponsors.manage": "none",
+    "groups.manage": "none",
+    "reservations.view": "read",
+    "reservations.approve": "none",
+    "reservations.manage": "none",
+    "hof.view": "read",
+    "hof.manage": "none",
+    "feedback.submit": "write",
+    "feedback.manage": "none",
+    "repairs.view": "read",
+    "repairs.submit": "write",
+    "repairs.manage": "none",
+    "finance.view": "none",
+    "finance.manage": "none",
+    "announcements.view": "read",
+    "announcements.manage": "none",
+    "profile.communications": "none",
+    "profile.compliance": "none",
+    "profile.system_roles": "none",
+    "inventory.my_equipment": "none",
+    "inventory.view": "read",
+    "inventory.items": "none",
+    "inventory.move": "none",
+    "inventory.locations": "none",
+    "inventory.vendors": "none",
+    "inventory.import": "none",
+    "inventory.bom": "write",
+    "inventory.bom_approve": "none",
+    "inventory.budgets": "none",
+    "inventory.carryover": "none",
+    "inventory.po": "none",
+    "inventory.receive": "none",
+    "inventory.checkout": "write",
+    "inventory.checkout_approve": "none",
+    "inventory.battery": "none",
+    "teams.season_history": "none",
+    "onboarding.view": "none",
+    "onboarding.manage": "none",
+    "members.directory": "read",
+    "members.edit_own": "write",
+    "scouting.scout": "read",
+    "scouting.manage": "none",
+    "profile.contact": "none",
+    "profile.personal": "none",
+    "profile.emergency": "none",
+    "profile.guardian": "none",
+    "profile.notes": "none",
+    "profile.enrollments": "none",
+    "profile.teams": "none",
+    "profile.ylc": "none",
+    "profile.mentor_tc": "none",
+    "profile.seasons": "none",
+    "profile.family": "none",
+    "profile.comm_prefs": "none",
+    "families.manage": "none",
+    "visitors.records": "none",
+    "visitors.checkin": "none",
+    "checkin.member": "none",
+    "checkin.event": "none",
+    "enrollment.records": "none",
+    "enrollment.payments": "none",
+    "enrollment.tc": "none",
+    "events.calendar": "none",
+    "events.logistics": "none",
+    "events.attendance": "none",
+    "seasons.manage": "none",
+    "communications.send": "none",
+    "communications.templates": "none",
+    "communications.history": "none",
+    "roles.ylc": "none",
+    "roles.compliance": "none",
+    "admin.console": "none",
+    "admin.audit": "none",
+    "incidents.report": "none",
+    "incidents.view_own": "none",
+    "incidents.queue": "none",
+    "incidents.triage": "none",
+    "incidents.close": "none",
+    "incidents.settings": "none",
+    "incidents.first_aid_log": "none",
+    "incidents.view_restricted": "none"
+  },
+  "DEFAULT_LEVEL": "none",
+  "SUPER_ROLES": [
+    "System Administrator"
+  ],
+  "MEMBER_TYPE_ROLE_MAP": {
+    "mentor": "Mentor",
+    "parent": "Parent",
+    "youth": "Youth Member",
+    "volunteer": "Volunteer"
+  }
+}

@@ -1,0 +1,27 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f0f4f8; color: #222; }
+a { color: inherit; }
+button { font-family: inherit; }
+
+/* Sidebar nav: no lingering focus ring after a mouse click (it looked like a
+   stuck grey bar), but keep a visible ring for keyboard navigation. */
+.trc-nav-link:focus { outline: none; }
+.trc-nav-link:focus-visible { outline: 2px solid #4dabf7; outline-offset: -3px; }
+input, select, textarea { font-family: inherit; }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Help manual print view: hide app chrome and toolbar when printing. */
+@media print {
+  .no-print { display: none !important; }
+
+  /* Asset label sheet: print ONLY the label grid, nothing else on the page. */
+  body.print-labels * { visibility: hidden; }
+  body.print-labels .label-sheet,
+  body.print-labels .label-sheet * { visibility: visible; }
+  body.print-labels .label-sheet { position: absolute; left: 0; top: 0; width: 100%; }
+  @page { margin: 0.35in; }
+}
