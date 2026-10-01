@@ -1,9 +1,3 @@
-<!--
-  DRAFT public README for the open-source release.
-  When the public repo is cut from a clean snapshot, this file becomes README.md.
-  Replace the placeholders in ALL CAPS (screenshots, URLs, contact) before publishing.
--->
-
 # TRCMS — Team & Program Management System
 
 **An open-source program-management platform for FIRST robotics organizations** — and, increasingly,
@@ -15,11 +9,15 @@ Built and battle-tested in production by the [Tulsa Robotics Center](https://tul
 now shared so other organizations can run it too. Self-hosted, single-tenant, and free
 ([AGPL-3.0](LICENSE)).
 
-> **Status:** production-ready for FIRST robotics orgs. A guided **first-run setup wizard** and
-> broader (non-robotics) configurability are on the roadmap — see `docs/OPEN_SOURCE_INSTALLER_PLAN.md`.
+> **Status:** production-ready for FIRST robotics organizations — with a guided **first-run setup
+> wizard**, runtime **module enable/disable**, and configurable **branding, programs, and compliance**.
+> Broader (non-robotics) generalization is ongoing.
 
-<!-- SCREENSHOT: dashboard -->
-<!-- ADD SCREENSHOTS HERE: dashboard, roster, event/check-in, reports -->
+<!-- Screenshots: add the four PNGs described in docs/screenshots/README.md, then this
+     comment is replaced with the Screenshots section referencing them. -->
+
+<!-- SCREENSHOTS-SLOT -->
+<!-- /SCREENSHOTS-SLOT -->
 
 ## What it does
 
