@@ -1,0 +1,31 @@
+# Dependabot — keep dependencies patched across the monorepo's three ecosystems.
+# Minor/patch updates are grouped into a single PR per ecosystem to cut noise;
+# major updates come as their own PRs so breaking changes are reviewed individually.
+version: 2
+updates:
+  # PHP backend (Composer) at the repo root.
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      composer-minor-patch:
+        update-types: ["minor", "patch"]
+
+  # React + TypeScript frontend.
+  - package-ecosystem: "npm"
+    directory: "/frontend"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      npm-minor-patch:
+        update-types: ["minor", "patch"]
+
+  # GitHub Actions workflow dependencies.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
