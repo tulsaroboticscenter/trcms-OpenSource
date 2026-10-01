@@ -30,13 +30,13 @@ config/*.env
 # ── Real-data / organization-specific operational scripts — NEVER publish ──
 deploy/mysql_import.sql
 deploy/mysql_schema.sql
-deploy/schema.sql
 deploy/snapshots/
 deploy/cleanup_*.sql
 deploy/fix_*.sql
 deploy/seed_*_tef.sql
 deploy/*_batch*.sql
-# (Keep deploy/migrations/** — that IS the canonical schema.)
+# NOTE: deploy/schema.sql (structure only) + deploy/seed_base.sql (generic) + deploy/migrations/**
+# ARE tracked — the installer loads them to build a fresh database.
 
 # ── OS / editor cruft ──────────────────────────────────────────────────
 .DS_Store
