@@ -13,11 +13,18 @@ now shared so other organizations can run it too. Self-hosted, single-tenant, an
 > wizard**, runtime **module enable/disable**, and configurable **branding, programs, and compliance**.
 > Broader (non-robotics) generalization is ongoing.
 
-<!-- Screenshots: add the four PNGs described in docs/screenshots/README.md, then this
-     comment is replaced with the Screenshots section referencing them. -->
+## Screenshots
 
-<!-- SCREENSHOTS-SLOT -->
-<!-- /SCREENSHOTS-SLOT -->
+<table>
+  <tr>
+    <td align="center" width="50%"><img src="docs/screenshots/02-modules.png" alt="Feature modules" width="440"><br><sub>A module for every part of the back office</sub></td>
+    <td align="center" width="50%"><img src="docs/screenshots/01-login.png" alt="Sign in" width="300"><br><sub>Sign in — your organization's branding</sub></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="docs/screenshots/03-compliance.png" alt="Compliance settings" width="440"><br><sub>Configurable compliance — rename items, choose what gates check-in</sub></td>
+    <td align="center" width="50%"><img src="docs/screenshots/04-programs.png" alt="Programs" width="440"><br><sub>Programs — FIRST out of the box, or define your own</sub></td>
+  </tr>
+</table>
 
 ## What it does
 
